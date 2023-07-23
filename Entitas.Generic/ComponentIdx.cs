@@ -7,7 +7,7 @@ namespace Entitas.Generic
     /// </summary>
     /// <typeparam name="TScope">Scope</typeparam>
     /// <typeparam name="TComponent">Component type</typeparam>
-    internal class ComponentIdx<TScope, TComponent> where TScope : IScope where TComponent : IComponent, new()
+    public class ComponentIdx<TScope, TComponent> where TScope : IScope where TComponent : IComponent, new()
     {
         public static int Id;
     }

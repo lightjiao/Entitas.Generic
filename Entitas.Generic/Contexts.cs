@@ -27,6 +27,7 @@ namespace Entitas.Generic
         {
             if (UnityEngine.Application.isPlaying)
             {
+                //ContextGo.CreateContexsGo(context);
                 var observer = new Entitas.VisualDebugging.Unity.ContextObserver(context);
                 UnityEngine.Object.DontDestroyOnLoad(observer.gameObject);
             }

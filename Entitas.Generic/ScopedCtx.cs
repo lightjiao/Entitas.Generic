@@ -39,7 +39,7 @@ namespace Entitas.Generic
 
         public Entity<TScope> GetEntity<TComponent>() where TComponent : IComponent, new()
         {
-            return GetGroup(Matchers.For<TScope, TComponent>()).GetSingleEntity();
+            return GetGroup(Matchers.Get<TScope, TComponent>()).GetSingleEntity();
         }
 
         public TComponent GetComp<TComponent>() where TComponent : IComponent, new()

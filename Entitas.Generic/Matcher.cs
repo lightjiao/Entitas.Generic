@@ -12,9 +12,7 @@ namespace Entitas.Generic
             {
                 if (_cached == null)
                 {
-                    var matcher = (Matcher<Entity<TScope>>)Matcher<Entity<TScope>>
-                            .AllOf(ComponentIdx<TScope, TComponent>.Id);
-
+                    var matcher = (Matcher<Entity<TScope>>)Matcher<Entity<TScope>>.AllOf(ComponentIdx<TScope, TComponent>.Id);
                     matcher.componentNames = ComponentTypeManager<TScope>.ComponentNames;
                     _cached = matcher;
                 }
@@ -26,9 +24,19 @@ namespace Entitas.Generic
 
     public class Matchers
     {
-        public static IMatcher<Entity<TScope>> For<TScope, TComponent>() where TScope : IScope where TComponent : IComponent, new()
+        public static IMatcher<Entity<TScope>> Get<TScope, TComponent>() where TScope : IScope where TComponent : IComponent, new()
         {
             return Matcher<TScope, TComponent>.Instance;
+        }
+
+        public static IAllOfMatcher<Entity<TScope>> AllOf<TScope>(params IMatcher<Entity<TScope>>[] matchers) where TScope : IScope
+        {
+            return Matcher<Entity<TScope>>.AllOf(matchers);
+        }
+
+        public static IAnyOfMatcher<Entity<TScope>> AnyOf<TScope>(params IMatcher<Entity<TScope>>[] matchers) where TScope : IScope
+        {
+            return Matcher<Entity<TScope>>.AnyOf(matchers);
         }
     }
 }
