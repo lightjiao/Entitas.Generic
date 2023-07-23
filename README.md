@@ -8,8 +8,11 @@ Download and put this project in your unity Asset directory
 
 ## Use sample
 - Install [Entitas](https://github.com/sschmid/Entitas) before this.
-- There is a simple sample in Entitas.Generic.Sample directory.
+
+- Copy this Entitas.Generic directory into your project.
+
 - Copy `EntitasMeta.cs` file into your project if you want.
+
 - ❗Notice: if you want use `EntityIndex`, you need Add or Replace component like below:
   ```csharp
   var entity = GameCtx.Inst.CreateEntity();
