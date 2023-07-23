@@ -16,12 +16,12 @@ Download and put this project in your unity Asset directory
 - ❗Notice: if you want use `EntityIndex`, you need Add or Replace component like below:
   ```csharp
   var entity = GameCtx.Inst.CreateEntity();
-  entity.Add<Player>();
-  ...
+
   var playerComp = entity.Create<Player>();
   playerComp.Id = 1,
   playerComp.Name = "Jack";
-  entity.Replace<Player>(playerComp);
+  
+  entity.Replace(playerComp);
   ```
 
 - Get a component if it is unique ( get the first entity in group )
