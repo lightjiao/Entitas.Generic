@@ -30,7 +30,6 @@ namespace Entitas.Generic
                 var observer = new Entitas.VisualDebugging.Unity.ContextObserver(context);
                 UnityEngine.Object.DontDestroyOnLoad(observer.gameObject);
             }
-        }
 #endif
         }
     }
