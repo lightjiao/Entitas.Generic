@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Contexts.cs~RF2d35c35c.TMP" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Entitas">
+        <HintPath>..\Entitas.1.14.1\Entitas\Entitas.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.CodeGeneration.Attributes">
+        <HintPath>..\Entitas.1.14.1\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
+      </Reference>
+      <Reference Include="Sherlog">
+        <HintPath>..\Entitas.1.14.1\Sherlog\Sherlog.dll</HintPath>
+      </Reference>
+      <Reference Include="Sherlog.Appenders">
+        <HintPath>..\Entitas.1.14.1\Sherlog\Sherlog.Appenders.dll</HintPath>
+      </Reference>
+      <Reference Include="Sherlog.Formatters">
+        <HintPath>..\Entitas.1.14.1\Sherlog\Sherlog.Formatters.dll</HintPath>
+      </Reference>
+      <Reference Include="TCPeasy">
+        <HintPath>..\Entitas.1.14.1\TCPeasy\TCPeasy.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>

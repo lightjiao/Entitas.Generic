@@ -22,15 +22,16 @@ namespace Entitas.Generic
             InitScopeObserver(context);
         }
 
-        [Conditional("UNITY_EDITOR")]
         private void InitScopeObserver(Entitas.IContext context)
         {
+#if UNITY_EDITOR
             if (UnityEngine.Application.isPlaying)
             {
-                //ContextGo.CreateContexsGo(context);
                 var observer = new Entitas.VisualDebugging.Unity.ContextObserver(context);
                 UnityEngine.Object.DontDestroyOnLoad(observer.gameObject);
             }
+        }
+#endif
         }
     }
 }

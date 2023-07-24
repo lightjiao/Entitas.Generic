@@ -17,33 +17,38 @@ namespace Sample
             var group = GameCtx.Inst.GetGroup(GameMatchers.Get<Player>());
             foreach (var item in group.GetEntities())
             {
-                Console.WriteLine($"Hello {item.Get<Player>}");
+                Console.WriteLine($"Hello {item.Get<Player>().Name}");
             }
         }
     }
 
-    internal static class Program
+    public class Program
     {
         private static Systems m_Systems;
 
-        public static async void Main(string[] args)
+        public static void Main(string[] args)
+        {
+            GameLoop().GetAwaiter().GetResult();
+        }
+
+        private async static Task GameLoop()
         {
             Contexts.Inst.Init<Game, InputScope>();
 
+            var jack = GameCtx.Inst.CreateEntity();
+            var player = jack.Add<Player>();
+            player.Id = 1;
+            player.Name = "Jack";
+
             m_Systems = new Feature().Add(new SayHelloSystem());
-
-            await Task.Run(GameLoop);
-        }
-
-        private async static void GameLoop()
-        {
+            
             m_Systems.Initialize();
             while (true)
             {
                 m_Systems.Execute();
                 m_Systems.Cleanup();
 
-                await Task.Yield();
+                await Task.Delay(500);
             }
         }
     }

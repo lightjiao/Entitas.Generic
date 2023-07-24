@@ -1,5 +1,6 @@
 ﻿using Entitas;
 using Entitas.Generic;
+using System;
 
 namespace Sample
 {

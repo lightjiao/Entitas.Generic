@@ -4,9 +4,12 @@ Inspired by [Entitas.Generic](https://github.com/yosadchyi/Entitas.Generic), and
 > If you use Unity 2022.2 or more, Entitas VisualDebug may have BUG, see this: [sschmid/Entitas#1067 (comment)](https://github.com/sschmid/Entitas/issues/1067#issuecomment-1623734894)
 
 ## How to install?
-Download and put this project in your unity Asset directory
+Download and put this project in your unity Asset directory.
 
-## Use sample
+## Code sample 
+-  There is a simple .Net6 sample in Entitas.Generic.Sample directory.
+
+## Use guide
 - Install [Entitas](https://github.com/sschmid/Entitas) before this.
 
 - Copy this Entitas.Generic directory into your project.

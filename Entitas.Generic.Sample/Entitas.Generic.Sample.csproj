@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Entitas.Generic\Entitas.Generic.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="DesperateDevs.Caching">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\DesperateDevs.Caching.dll</HintPath>
+      </Reference>
+      <Reference Include="DesperateDevs.Extensions">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\DesperateDevs.Extensions.dll</HintPath>
+      </Reference>
+      <Reference Include="DesperateDevs.Reflection">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\DesperateDevs.Reflection.dll</HintPath>
+      </Reference>
+      <Reference Include="DesperateDevs.Serialization">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\DesperateDevs.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="DesperateDevs.Threading">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\DesperateDevs.Threading.dll</HintPath>
+      </Reference>
+      <Reference Include="DesperateDevs.Unity">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\DesperateDevs.Unity.dll</HintPath>
+      </Reference>
+      <Reference Include="DesperateDevs.Unity.Editor">
+        <HintPath>..\Entitas.1.14.1\DesperateDevs\Editor\DesperateDevs.Unity.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas">
+        <HintPath>..\Entitas.1.14.1\Entitas\Entitas.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.CodeGeneration.Attributes">
+        <HintPath>..\Entitas.1.14.1\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.Migration">
+        <HintPath>..\Entitas.1.14.1\Entitas\Editor\Entitas.Migration.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.Migration.Unity.Editor">
+        <HintPath>..\Entitas.1.14.1\Entitas\Editor\Entitas.Migration.Unity.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.Unity">
+        <HintPath>..\Entitas.1.14.1\Entitas\Entitas.Unity.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.Unity.Editor">
+        <HintPath>..\Entitas.1.14.1\Entitas\Editor\Entitas.Unity.Editor.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.VisualDebugging.Unity">
+        <HintPath>..\Entitas.1.14.1\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
+      </Reference>
+      <Reference Include="Entitas.VisualDebugging.Unity.Editor">
+        <HintPath>..\Entitas.1.14.1\Entitas\Editor\Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>
+  
